@@ -2,8 +2,8 @@
  /**
  * @package mod_currency_cbrf
  * @author Rybalko Igor
- * @version 1.0
- * @copyright (C) 2016 http://wolfweb.com.ua
+ * @version 1.1
+ * @copyright (C) 2017 http://wolfweb.com.ua
  * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
  *
 */
@@ -13,7 +13,7 @@ require_once dirname(__FILE__) . '/helper.php';
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
-$ratesCbrf = RatesCbrf::getInstance();
-$data = $ratesCbrf->getCurrencyArray();
+$ratesCbrf = ModCurrencyCbrfHelper::getInstance();
+$data = $ratesCbrf->getCurrency();
 
 require JModuleHelper::getLayoutPath('mod_currency_cbrf', $params->get('layout', 'default')); 
