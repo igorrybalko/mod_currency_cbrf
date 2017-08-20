@@ -1,7 +1,7 @@
 # mod_currency_cbrf
 Модуль курса валют ЦБРФ для Joomla 3+<br />
 <h4>Демо</h4>
-для просмотра http://demo.wolfweb.com.ua/
+для просмотра 
 <h4>Подробнее о модуле</h4>
 http://wolfweb.com.ua/cms/moduli-kursa-valyut-nbu-i-tsbrf-dlya-joomla/
 <h4>Автор</h4>
