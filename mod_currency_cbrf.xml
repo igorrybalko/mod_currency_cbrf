@@ -9,21 +9,28 @@
 	<copyright>GNU/GPL</copyright>
 	<authorEmail>igorrybalko2009@yandex.ru</authorEmail>
     <authorUrl>wolfweb.com.ua</authorUrl>
-    <version>1.0.0</version>
-	<description>Exchange Rates CBRF</description>
+    <version>1.2.0</version>
+	<description>Exchange Rates CBRF Developed by http://wolfweb.com.ua</description>
 
 	<files>
 		<filename module="mod_currency_cbrf">mod_currency_cbrf.php</filename>
 		<filename>index.html</filename>
-		<filename>cron_currency_file.php</filename>
-		<filename>data.json</filename>
 		<filename>helper.php</filename>
 		<filename>mod_currency_cbrf.xml</filename>
+		<folder>language</folder>
 		<folder>tmpl</folder>
   	</files>	  
 
 	<config>  
 		<fields name="params">
+			<fieldset name="basic">
+				<field name="cache_time" type="list" default="240" label="MOD_CURRENCY_CBRF_CACHE_TIME" description="">
+					<option value="60">1</option>
+					<option value="120">2</option>
+					<option value="240">4</option>
+					<option value="360">6</option>
+				</field>
+			</fieldset>
 			<fieldset name="advanced">
 				<field
 			        name="layout"
@@ -38,6 +45,9 @@
 			</fieldset>
 		</fields>
 	</config>
-
+	<updateservers>
+		<server type="collection">http://example.com/list.xml</server>
+		<server type="extension" priority="2" name="My Extension's Updates">http://example.com/extension.xml</server>
+	</updateservers>
 </extension>
 

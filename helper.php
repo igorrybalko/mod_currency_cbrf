@@ -2,8 +2,8 @@
  /**
  * @package mod_currency_cbrf
  * @author Rybalko Igor
- * @version 1.1
- * @copyright (C) 2017 http://wolfweb.com.ua
+ * @version 1.2.0
+ * @copyright (C) 2018 http://wolfweb.com.ua
  * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
  *
 */
@@ -23,10 +23,10 @@ class ModCurrencyCbrfHelper{
 		return self::$_instance;
 	}
 
-	public function getCurrency(){
+	public function getCurrency($cache_time){
 		$cache = JFactory::getCache('modCurrencyCbrf', '');
 		$cache->setCaching(true);
-		$cache->setLifeTime(360);
+		$cache->setLifeTime($cache_time);
 		$rates = $cache->get('ratesCbrf');
 
 		if(!$rates) {
