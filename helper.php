@@ -2,7 +2,7 @@
  /**
  * @package mod_currency_cbrf
  * @author Rybalko Igor
- * @version 1.2.0
+ * @version 1.2.1
  * @copyright (C) 2018 http://wolfweb.com.ua
  * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
  *
@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 class ModCurrencyCbrfHelper{
 
 	static private $_instance;
-	private function __conctract(){}
+	private function __construct(){}
 	private function __clone(){}
 
 	static function getInstance(){
